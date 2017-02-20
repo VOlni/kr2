@@ -1,0 +1,89 @@
+Контрольное задание 1
+
+задание 1
+
+reverse_string = original_string[::-1]
+print(reverse_string)
+
+задание 2
+
+change_string = original_string[2::3]
+print(change_string)
+
+задание 3
+
+counting_vowels = 0
+
+for char in var_string:
+
+    if char.lower() in ['a', 'e', 'i', 'o', 'u']:
+
+        counting_vowels += 1
+
+print(counting_vowels)
+
+задание 4
+
+count = 0
+
+for i in range(len(var_string)):
+
+    if var_string[i:i+3] == 'wow':
+
+        count += 1
+
+print(count)
+
+Контрольное задание 2
+
+задание 1
+
+palindromes = 0
+
+for word in text.split():
+
+    word = word.lower().rstrip(',.:;!?')
+
+    if word == word[::-1]:
+
+        palindromes += 1
+
+print(palindromes)
+
+задание 2
+
+odds = filter(lambda x: int(x) % 2 == 1, list(var_string))
+
+evens = filter(lambda x: int(x) % 2 == 0, list(var_string))
+
+change_string = ''.join(sorted(odds) + sorted(evens, reverse=True))
+
+print change_string
+
+p.s. В этом примере используются анонимная функция lambda, которую мы будем проходить на второй неделе. Но мы можете ознакомиться с ними заранее, как пример решения нашей контрольной работы.
+
+задание 3
+
+longest = ''
+
+if var_string:
+
+    curString = var_string[0]
+
+    longest = var_string[0]
+
+    for i in range(1, len(var_string)):
+
+        if var_string[i] >= curString[-1]:
+
+            curString += var_string[i]
+
+            if len(curString) > len(longest):
+
+                longest = curString
+
+        else:
+
+            curString = var_string[i]
+
+print(longest)
